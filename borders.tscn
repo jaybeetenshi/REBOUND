@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b746nn8c8ut1x"]
+
+[node name="Borders" type="Node2D" unique_id=868175011]
+
+[node name="LeftBorder" type="StaticBody2D" parent="." unique_id=1142455633]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftBorder" unique_id=454364968]
+
+[node name="RightBorder" type="StaticBody2D" parent="." unique_id=1970455106]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightBorder" unique_id=960787452]

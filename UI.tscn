@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://btyrrvvolrwk1"]
+
+[node name="UI" type="CanvasLayer" unique_id=609496754]
+
+[node name="TimerLabel" type="Label" parent="." unique_id=1176896958]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="GameoverPanel" type="Panel" parent="." unique_id=77221384]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GameOverLabel" type="Label" parent="GameoverPanel" unique_id=1790878098]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="RestartButton" type="Button" parent="GameoverPanel" unique_id=139032147]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

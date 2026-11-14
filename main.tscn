@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://dy52ls4sro768"]
+
+[ext_resource type="PackedScene" uid="uid://8k6ytg4hmcsx" path="res://player.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://cnl0vxhw6e00d" path="res://main.gd" id="1_7mycd"]
+[ext_resource type="PackedScene" uid="uid://dbflxwh3c7vrl" path="res://static_body_2d.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://btyrrvvolrwk1" path="res://UI.tscn" id="4_272bh"]
+[ext_resource type="PackedScene" uid="uid://bmjfj8rn2c4yt" path="res://Water.tscn" id="5_5vw27"]
+[ext_resource type="PackedScene" uid="uid://b746nn8c8ut1x" path="res://borders.tscn" id="6_kek77"]
+[ext_resource type="PackedScene" uid="uid://b1ylnlrw75njn" path="res://goal.tscn" id="7_272bh"]
+
+[node name="Main" type="Node2D" unique_id=290036539]
+script = ExtResource("1_7mycd")
+
+[node name="Player" parent="." unique_id=1541887340 instance=ExtResource("1_0xm2m")]
+position = Vector2(160, 590)
+
+[node name="Platform" parent="." unique_id=1417705662 instance=ExtResource("2_h2yge")]
+position = Vector2(160, 650)
+
+[node name="Platform2" parent="." unique_id=964757647 instance=ExtResource("2_h2yge")]
+position = Vector2(400, 530)
+
+[node name="Platform3" parent="." unique_id=822958214 instance=ExtResource("2_h2yge")]
+position = Vector2(650, 430)
+
+[node name="Platform4" parent="." unique_id=142026875 instance=ExtResource("2_h2yge")]
+position = Vector2(900, 290)
+
+[node name="Platform5" parent="." unique_id=728226382 instance=ExtResource("2_h2yge")]
+position = Vector2(1120, 170)
+
+[node name="UI" parent="." unique_id=609496754 instance=ExtResource("4_272bh")]
+
+[node name="Water" parent="." unique_id=106554682 instance=ExtResource("5_5vw27")]
+position = Vector2(809, 125)
+
+[node name="Borders" parent="." unique_id=868175011 instance=ExtResource("6_kek77")]
+position = Vector2(3, 7)
+
+[node name="Goal" parent="." unique_id=484316989 instance=ExtResource("7_272bh")]
+position = Vector2(1128, 142)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=349908000]
+
+[node name="WinLabel" type="Label" parent="CanvasLayer" unique_id=1967415289]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "YOU WIN!"
+
+[connection signal="body_entered" from="Goal" to="." method="_on_goal_body_entered"]

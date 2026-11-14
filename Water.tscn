@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bmjfj8rn2c4yt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_orntv"]
+size = Vector2(2000, 100)
+
+[node name="Water" type="Area2D" unique_id=106554682]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=685173964]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1389746887]
+position = Vector2(0, 600)
+shape = SubResource("RectangleShape2D_orntv")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=863827743]
+color = Color(0.32762906, 0.31530124, 1, 1)
